@@ -30,6 +30,10 @@ app.post("/api/upload", upload.single("file"), function (req, res) {
   res.status(200).json(file.filename);
 });
 
+app.get("/ping", (req,res)=>{
+  console.log(Date.now());
+})
+
 app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/users", usersRoutes);
