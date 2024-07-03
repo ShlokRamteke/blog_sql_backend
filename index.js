@@ -31,7 +31,7 @@ app.post("/api/upload", upload.single("file"), function (req, res) {
 });
 
 app.get("/ping", (req,res)=>{
-  console.log(Date.now());
+  
   return res.status(200).json("Alive");
 })
 
